@@ -8,7 +8,7 @@ matrix:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-4.9']
-      env: TOOLSET=g++-4.9 BUILD_TYPE='Debug'
+      env: TOOLSET=g++-4.9
     
     - os: linux
       compiler: gcc
@@ -16,8 +16,31 @@ matrix:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
-      env: TOOLSET=g++-5 BUILD_TYPE='Debug'
-    
+      env: TOOLSET=g++-5
+
+    - os: linux
+      compiler: gcc
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-6']
+      env: TOOLSET=g++-6
+
+    - os: linux
+      compiler: gcc
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-7']
+      env: TOOLSET=g++-7
+ 
+    - os: linux
+      compiler: gcc
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-8']
+      env: TOOLSET=g++-8   
 install:
   - cd ../
 
