@@ -100,14 +100,23 @@
   _Pragma("GCC diagnostic ignored \"-Wregister\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow=local\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow=compatible-local\"") \
-  _Pragma("GCC diagnostic ignored \"-Wsign-compare\"")
 // clang-format on
 #else
 
 #define DISABLE_GCC_7_WARNINGS /*nothing to do here */
 
 #endif
+#if __GNUC__ >= 5
 
+// clang-format off
+#define DISABLE_GCC_5_WARNINGS \
+  _Pragma("GCC diagnostic ignored \"-Wsuggest-override\"") \
+// clang-format on
+#else
+
+#define DISABLE_GCC_5_WARNINGS /*nothing to do here */
+
+#endif
 // clang-format off
 #define THIRD_PARTY_HEADERS_BEGIN \
   _Pragma("GCC diagnostic push") \
@@ -131,6 +140,8 @@
   _Pragma("GCC diagnostic ignored \"-Wconversion\"") \
   _Pragma("GCC diagnostic ignored \"-Wfloat-conversion\"") \
   _Pragma("GCC diagnostic ignored \"-Wpedantic\"") \
+  _Pragma("GCC diagnostic ignored \"-Wsign-compare\"") \
+  DISABLE_GCC_5_WARNINGS \
   DISABLE_GCC_7_WARNINGS
 // clang-format on
 #endif
