@@ -129,7 +129,6 @@
   _Pragma("GCC diagnostic ignored \"-Wempty-body\"") \
   _Pragma("GCC diagnostic ignored \"-Wconversion\"") \
   _Pragma("GCC diagnostic ignored \"-Wformat=\"") \
-  _Pragma("GCC diagnostic ignored \"-Wsuggest-override\"") \
   _Pragma("GCC diagnostic ignored \"-Wold-style-cast\"") \
   _Pragma("GCC diagnostic ignored \"-Wnon-virtual-dtor\"") \
   _Pragma("GCC diagnostic ignored \"-Wmaybe-uninitialized\"") \
