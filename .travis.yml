@@ -33,5 +33,5 @@ install:
 
 script:
   - mkdir build/ && cd build/
-  - $CMAKE -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic -Wno-parentheses" ../
+  - $CMAKE -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic -Werror" ../
   - $CMAKE --build .
