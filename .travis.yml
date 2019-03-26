@@ -1,5 +1,4 @@
 language: cpp
-
 matrix:
   include:
     - os: linux
@@ -41,6 +40,42 @@ matrix:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-8']
       env: TOOLSET=g++-8   
+
+    - os: linux
+      dist: trusty 
+      compiler: clang 
+      addons:
+        apt:
+          sources: ['llvm-toolchain-trusty-4.0']
+          packages: ['clang-4.0']
+      env: TOOLSET=clang-4.0
+    
+    - os: linux
+      dist: trusty 
+      compiler: clang
+      addons:
+        apt:
+          sources: ['llvm-toolchain-trusty-5.0']
+          packages: ['clang-5.0']
+      env: TOOLSET=clang-5.0
+
+    - os: linux
+      dist: xenial
+      compiler: clang
+      addons:
+        apt:
+          sources: ['llvm-toolchain-xenial']
+          packages: ['clang-6.0']
+      env: TOOLSET=clang-6.0
+
+    - os: linux
+      dist: xenial
+      compiler: clang
+      addons:
+        apt:
+          sources: ['llvm-toolchain-xenial-7']
+          packages: ['clang-7']
+      env: TOOLSET=clang-7
 install:
   - cd ../
 
