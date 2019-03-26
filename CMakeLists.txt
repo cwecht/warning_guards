@@ -3,3 +3,6 @@ project(warning_guards)
 
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE include/)
+
+add_executable(basic_compilation_text test/basic_compilation_test.cpp)
+target_link_libraries(basic_compilation_text ${PROJECT_NAME})
