@@ -106,7 +106,6 @@
   _Pragma("GCC diagnostic ignored \"-Wint-in-bool-context\"") \
   _Pragma("GCC diagnostic ignored \"-Wswitch-unreachable\"") \
   _Pragma("GCC diagnostic ignored \"-Wexpansion-to-defined\"") \
-  _Pragma("GCC diagnostic ignored \"-Wduplicate-decl-specifier\"") \
   _Pragma("GCC diagnostic ignored \"-Wdangling-else\"") \
 // clang-format on
 #else
