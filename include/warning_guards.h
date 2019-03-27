@@ -15,6 +15,19 @@
 
 #ifdef __clang__
 
+#if __clang_major__ >= 8
+
+// clang-format off
+#define DISABLE_CLANG_8_WARNINGS \
+  _Pragma("GCC diagnostic ignored \"-Wextra-semi-stmt\"") \
+  _Pragma("GCC diagnostic ignored \"-Wempty-init-stmt \"") \
+// clang-format on
+#else
+
+#define DISABLE_CLANG_8_WARNINGS /*nothing to do here */
+
+#endif
+
 #if __clang_major__ >= 6
 
 // clang-format off
@@ -91,6 +104,7 @@
   _Pragma("GCC diagnostic ignored \"-Wused-but-marked-unused\"") \
   DISABLE_CLANG_5_WARNINGS \
   DISABLE_CLANG_6_WARNINGS \
+  DISABLE_CLANG_8_WARNINGS \
 // clang-format on
 #else
 
