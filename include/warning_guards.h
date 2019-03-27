@@ -25,7 +25,7 @@
   _Pragma("GCC diagnostic ignored \"-Woverloaded-virtual\"") \
   _Pragma("GCC diagnostic ignored \"-Wnewline-eof\"") \
   _Pragma("GCC diagnostic ignored \"-Wundef\"") \
-  _Pragma("GCC diagnostic ignored \"-Wtautological-constant-compare \"") \
+  _Pragma("GCC diagnostic ignored \"-Wtautological-constant-compare\"") \
 // clang-format on
 #else
 
