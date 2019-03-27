@@ -6,3 +6,4 @@ target_include_directories(${PROJECT_NAME} INTERFACE include/)
 
 add_executable(basic_compilation_text test/basic_compilation_test.cpp)
 target_link_libraries(basic_compilation_text ${PROJECT_NAME})
+set_target_properties(basic_compilation_text PROPERTIES COMPILE_FLAGS "-Wall -Wextra -Werror")

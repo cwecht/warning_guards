@@ -101,5 +101,5 @@ install:
 
 script:
   - mkdir build/ && cd build/
-  - $CMAKE -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic -Werror" ../
+  - $CMAKE ../
   - $CMAKE --build .
