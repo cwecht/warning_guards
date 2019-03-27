@@ -76,6 +76,16 @@ matrix:
           sources: ['llvm-toolchain-xenial-7']
           packages: ['clang-7']
       env: TOOLSET=clang-7
+
+    - os: linux
+      dist: xenial
+      compiler: clang
+      addons:
+        apt:
+          sources: ['llvm-toolchain-xenial-8']
+          packages: ['clang-8']
+      env: TOOLSET=clang-8
+
 install:
   - cd ../
 
