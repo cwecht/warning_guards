@@ -25,6 +25,7 @@
   _Pragma("GCC diagnostic ignored \"-Woverloaded-virtual\"") \
   _Pragma("GCC diagnostic ignored \"-Wnewline-eof\"") \
   _Pragma("GCC diagnostic ignored \"-Wundef\"") \
+  _Pragma("GCC diagnostic ignored \"-Wtautological-constant-compare \"") \
 // clang-format on
 #else
 
@@ -38,6 +39,7 @@
 #define DISABLE_CLANG_5_WARNINGS \
   _Pragma("GCC diagnostic ignored \"-Wzero-as-null-pointer-constant\"") \
   _Pragma("GCC diagnostic ignored \"-Wcast-qual\"") \
+  _Pragma("GCC diagnostic ignored \"-Wunused-lambda-capture\"") \
   _Pragma("GCC diagnostic ignored \"-Wunused-template\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow-field\"") \
   _Pragma("GCC diagnostic ignored \"-Wimplicit-fallthrough\"") \
