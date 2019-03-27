@@ -122,7 +122,7 @@
   _Pragma("GCC diagnostic ignored \"-Wduplicated-cond\"") \
   _Pragma("GCC diagnostic ignored \"-Wshift-negative-value\"") \
   _Pragma("GCC diagnostic ignored \"-Wtautological-compare\"") \
-  _Pragma("GCC diagnostic ignored \"-Wmisleading-indentation \"") \
+  _Pragma("GCC diagnostic ignored \"-Wmisleading-indentation\"") \
 // clang-format on
 #else
 
