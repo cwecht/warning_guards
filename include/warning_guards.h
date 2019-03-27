@@ -24,7 +24,7 @@
   _Pragma("GCC diagnostic ignored \"-Wredundant-parens\"") \
   _Pragma("GCC diagnostic ignored \"-Woverloaded-virtual\"") \
   _Pragma("GCC diagnostic ignored \"-Wnewline-eof\"") \
-  _Pragma("GCC diagnostic ignored \"-Wundef\"")
+  _Pragma("GCC diagnostic ignored \"-Wundef\"") \
 // clang-format on
 #else
 
@@ -40,7 +40,7 @@
   _Pragma("GCC diagnostic ignored \"-Wcast-qual\"") \
   _Pragma("GCC diagnostic ignored \"-Wunused-template\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow-field\"") \
-  _Pragma("GCC diagnostic ignored \"-Wimplicit-fallthrough\"")
+  _Pragma("GCC diagnostic ignored \"-Wimplicit-fallthrough\"") \
 // clang-format on
 #else
 
@@ -88,10 +88,9 @@
   _Pragma("GCC diagnostic ignored \"-Wmissing-variable-declarations\"") \
   _Pragma("GCC diagnostic ignored \"-Wused-but-marked-unused\"") \
   DISABLE_CLANG_5_WARNINGS \
-  DISABLE_CLANG_6_WARNINGS
+  DISABLE_CLANG_6_WARNINGS \
 // clang-format on
 #else
-
 
 #if __GNUC__ >= 7
 
@@ -106,6 +105,19 @@
 #define DISABLE_GCC_7_WARNINGS /*nothing to do here */
 
 #endif
+
+#if __GNUC__ >= 6
+
+// clang-format off
+#define DISABLE_GCC_6_WARNINGS \
+  _Pragma("GCC diagnostic ignored \"-Wduplicated-cond\"") \
+// clang-format on
+#else
+
+#define DISABLE_GCC_6_WARNINGS /*nothing to do here */
+
+#endif
+
 #if __GNUC__ >= 5
 
 // clang-format off
@@ -141,7 +153,8 @@
   _Pragma("GCC diagnostic ignored \"-Wpedantic\"") \
   _Pragma("GCC diagnostic ignored \"-Wsign-compare\"") \
   DISABLE_GCC_5_WARNINGS \
-  DISABLE_GCC_7_WARNINGS
+  DISABLE_GCC_6_WARNINGS \
+  DISABLE_GCC_7_WARNINGS \
 // clang-format on
 #endif
 
