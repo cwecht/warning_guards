@@ -99,6 +99,13 @@
   _Pragma("GCC diagnostic ignored \"-Wregister\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow=local\"") \
   _Pragma("GCC diagnostic ignored \"-Wshadow=compatible-local\"") \
+  _Pragma("GCC diagnostic ignored \"-Wimplicit-fallthrough\"") \
+  _Pragma("GCC diagnostic ignored \"-Wmemset-elt-size\"") \
+  _Pragma("GCC diagnostic ignored \"-Wint-in-bool-context\"") \
+  _Pragma("GCC diagnostic ignored \"-Wswitch-unreachable\"") \
+  _Pragma("GCC diagnostic ignored \"-Wexpansion-to-defined\"") \
+  _Pragma("GCC diagnostic ignored \"-Wduplicate-decl-specifier\"") \
+  _Pragma("GCC diagnostic ignored \"-Wdangling-else\"") \
 // clang-format on
 #else
 
@@ -111,6 +118,9 @@
 // clang-format off
 #define DISABLE_GCC_6_WARNINGS \
   _Pragma("GCC diagnostic ignored \"-Wduplicated-cond\"") \
+  _Pragma("GCC diagnostic ignored \"-Wshift-negative-value\"") \
+  _Pragma("GCC diagnostic ignored \"-Wtautological-compare\"") \
+  _Pragma("GCC diagnostic ignored \"-Wmisleading-indentation \"") \
 // clang-format on
 #else
 
@@ -122,7 +132,12 @@
 
 // clang-format off
 #define DISABLE_GCC_5_WARNINGS \
+  _Pragma("GCC diagnostic ignored \"-Wswitch-bool\"") \
+  _Pragma("GCC diagnostic ignored \"-Wlogical-not-parentheses\"") \
+  _Pragma("GCC diagnostic ignored \"-Wbool-compare\"") \
   _Pragma("GCC diagnostic ignored \"-Wsuggest-override\"") \
+  _Pragma("GCC diagnostic ignored \"-Wsuggest-final-types\"") \
+  _Pragma("GCC diagnostic ignored \"-Wsuggest-final-methods\"") \
 // clang-format on
 #else
 
