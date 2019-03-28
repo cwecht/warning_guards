@@ -108,6 +108,24 @@
 // clang-format on
 #else
 
+#if __GNUC__ >= 8
+
+// clang-format off
+#define DISABLE_GCC_(_WARNINGS \
+  _Pragma("GCC diagnostic ignored \"-Wmultistatement-macros\"") \
+  _Pragma("GCC diagnostic ignored \"-Wstringop-truncation\"") \
+  _Pragma("GCC diagnostic ignored \"-Wcast-function-type\"") \
+  _Pragma("GCC diagnostic ignored \"-Wsizeof-pointer-div\"") \
+  _Pragma("GCC diagnostic ignored \"-Wcast-align=strict\"") \
+  _Pragma("GCC diagnostic ignored \"-Warray-bounds\"") \
+  _Pragma("GCC diagnostic ignored \"-Wclass-memaccess\"") \
+// clang-format on
+#else
+
+#define DISABLE_GCC_8_WARNINGS /*nothing to do here */
+
+#endif
+
 #if __GNUC__ >= 7
 
 // clang-format off
@@ -185,6 +203,7 @@
   DISABLE_GCC_5_WARNINGS \
   DISABLE_GCC_6_WARNINGS \
   DISABLE_GCC_7_WARNINGS \
+  DISABLE_GCC_8_WARNINGS \
 // clang-format on
 #endif
 
