@@ -20,7 +20,7 @@
 // clang-format off
 #define DISABLE_CLANG_8_WARNINGS \
   _Pragma("GCC diagnostic ignored \"-Wextra-semi-stmt\"") \
-  _Pragma("GCC diagnostic ignored \"-Wempty-init-stmt \"") \
+  _Pragma("GCC diagnostic ignored \"-Wempty-init-stmt\"") \
 // clang-format on
 #else
 
