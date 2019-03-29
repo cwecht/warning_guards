@@ -102,6 +102,7 @@
   _Pragma("GCC diagnostic ignored \"-Wreturn-type-c-linkage\"") \
   _Pragma("GCC diagnostic ignored \"-Wmissing-variable-declarations\"") \
   _Pragma("GCC diagnostic ignored \"-Wused-but-marked-unused\"") \
+  _Pragma("GCC diagnostic ignored \"-Wunused-variable\"") \
   DISABLE_CLANG_5_WARNINGS \
   DISABLE_CLANG_6_WARNINGS \
   DISABLE_CLANG_8_WARNINGS \
@@ -200,6 +201,7 @@
   _Pragma("GCC diagnostic ignored \"-Wfloat-conversion\"") \
   _Pragma("GCC diagnostic ignored \"-Wpedantic\"") \
   _Pragma("GCC diagnostic ignored \"-Wsign-compare\"") \
+  _Pragma("GCC diagnostic ignored \"-Wunused-variable\"") \
   DISABLE_GCC_5_WARNINGS \
   DISABLE_GCC_6_WARNINGS \
   DISABLE_GCC_7_WARNINGS \
