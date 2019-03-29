@@ -21,4 +21,11 @@ THIRD_PARTY_HEADERS_BEGIN
 THIRD_PARTY_HEADERS_END
 ~~~
 
+## Supported Compilers
 
+Currently these compilers/versions are supported:
+
+  - GCC 4.9, 5, 6, 7, 8
+  - Clang 4, 5, 6, 7, 8
+
+If used with newer compilers, this library will still work, but warnings introduced with newer compiler versions are not deactivated.
