@@ -112,7 +112,7 @@
 #if __GNUC__ >= 8
 
 // clang-format off
-#define DISABLE_GCC_(_WARNINGS \
+#define DISABLE_GCC_8_WARNINGS \
   _Pragma("GCC diagnostic ignored \"-Wmultistatement-macros\"") \
   _Pragma("GCC diagnostic ignored \"-Wstringop-truncation\"") \
   _Pragma("GCC diagnostic ignored \"-Wcast-function-type\"") \
