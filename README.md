@@ -29,3 +29,4 @@ Currently these compilers/versions are supported:
   - Clang 4, 5, 6, 7, 8
 
 If used with newer compilers, this library will still work, but warnings introduced with newer compiler versions are not deactivated.
+Newer compilers support `#pragma GCC system_header` which can be used to supress all warnings from a particular file. 
